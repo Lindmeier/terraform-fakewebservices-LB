@@ -10,7 +10,6 @@ variable "official_name" {
 
 variable "server" {
   description = "servers for the loadbalancer"
-  type        = string # TODO List?
-  # servers[*].name # TODO
+  type        = list(string)
   nullable    = false
 }
