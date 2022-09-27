@@ -3,14 +3,14 @@
 # ------------------------------------------------------------------------------
 
 variable "official_name" {
-  description = "official VM name"
+  description = "official LB name"
   type        = string
   nullable    = false
 }
 
-
-variable "vm_type" {
-  description = "vm_type e.g. webserver"
-  type        = string
+variable "server" {
+  description = "servers for the loadbalancer"
+  type        = string # TODO List?
+  # servers[*].name # TODO
   nullable    = false
 }

@@ -5,7 +5,7 @@
 # ------------------------------------------------------------------------------
 # Resources
 # ------------------------------------------------------------------------------
-resource "fakewebservices_server" "vm" {
+resource "fakewebservices_load_balancer" "lb" {
   name = var.official_name
-  type = var.vm_type
+  servers = fakewebservices_server.servers[*].name # TODO
 }
