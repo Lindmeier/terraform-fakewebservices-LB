@@ -7,5 +7,5 @@
 # ------------------------------------------------------------------------------
 resource "fakewebservices_load_balancer" "lb" {
   name = var.official_name
-  servers = join(", ", var.servers)
+  servers = var.servers
 }

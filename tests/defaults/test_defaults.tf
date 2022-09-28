@@ -22,8 +22,8 @@ provider "fakewebservices" {
 module "main" {
   # das zu testende Module wird geladen
   source = "../.."
-  official_name = "VM-124234"
-  vm_type = "webserver"
+  official_name = "LB-124234"
+  servers = tolist(["vm1", "VM2"])
 }
 
 # ------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ resource "test_assertions" "testfall1" {
 
   check "vm_id" {
     description = "VM Id has been created"
-    condition   = can(module.main.vm_id != "")
+    condition   = can(module.main.lb_id != "")
   }
 }
 

@@ -8,7 +8,7 @@ variable "official_name" {
   nullable    = false
 }
 
-variable "server" {
+variable "servers" {
   description = "servers for the loadbalancer"
   type        = list(string)
   nullable    = false

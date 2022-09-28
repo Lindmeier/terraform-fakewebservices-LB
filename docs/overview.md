@@ -3,7 +3,7 @@
 ## Overview
 
 ### Description
-Baustein 2 : VM: creates a VM
+Baustein 3 : LB: creates a LB
 
 ### Usage
 ```
@@ -11,11 +11,11 @@ provider "fakewebservices" {
   token = var.provider_token
 }
 
-module 'vm'{
+module 'lb'{
     source=
     version=
     official_name="VM-"
-    vm_type="webserver"
+    servers=tolist(["server1","server2"])
 }
 ```
 
